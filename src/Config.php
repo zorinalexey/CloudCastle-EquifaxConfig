@@ -68,6 +68,12 @@ class Config extends AbstractInstance
     private bool $test = false;
 
     /**
+     * Действие производимое с записью кредитной истории
+     * @var Action|null
+     */
+    private ?Action $action;
+
+    /**
      * Конструктор класса
      * @param string $configFile Json файл конфигурации сервиса
      */
@@ -162,6 +168,16 @@ class Config extends AbstractInstance
     public function getInn(): string
     {
         return $this->inn;
+    }
+
+    /**
+     * Установить действия производимые с записью кредитной истории
+     * @param Action $action Объект действий
+     * @return void
+     */
+    public function setAction(Action $action): void
+    {
+        $this->action = $action;
     }
 
 }

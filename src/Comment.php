@@ -55,7 +55,7 @@ class Comment extends AbstractInstance
 
     /**
      * Установить параметры коментария
-     * @param array $comment
+     * @param array $comment Массив значений для коментария
      * @return string
      */
     public static function set(array $comment = []): string

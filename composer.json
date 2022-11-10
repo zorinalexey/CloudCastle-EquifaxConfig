@@ -1,6 +1,6 @@
 {
     "name": "cloud-castle/equifax-config",
-    "description": "test",
+    "description": "Библиотека для конфигурирования библиотек cloud-castle/equifax-scoring и cloud-castle/equifax-report",
     "type": "library",
     "require": {
         "php": ">=7.4",

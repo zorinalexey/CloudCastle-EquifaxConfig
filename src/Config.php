@@ -19,6 +19,8 @@ use CloudCastle\EquifaxConfig\AbstractClasses\AbstractInstance;
 class Config extends AbstractInstance
 {
 
+    const version = '4.0';
+
     /**
      * Id партнера системе equifax
      * @var string
@@ -30,6 +32,12 @@ class Config extends AbstractInstance
      * @var string
      */
     private string $orgName = '';
+
+    /**
+     * Дирректория для сохранения сгенерированых файлов
+     * @var string
+     */
+    public string $filesDir = __DIR__;
 
     /**
      * ОГРН организации
@@ -71,7 +79,7 @@ class Config extends AbstractInstance
      * Действие производимое с записью кредитной истории
      * @var Action|null
      */
-    private ?Action $action;
+    private $action = false;
 
     /**
      * Конструктор класса
@@ -178,6 +186,14 @@ class Config extends AbstractInstance
     public function setAction(Action $action): void
     {
         $this->action = $action;
+    }
+
+    public function getAction(): Action
+    {
+        if ($this->action) {
+            return $this->action;
+        }
+        return new Action();
     }
 
 }

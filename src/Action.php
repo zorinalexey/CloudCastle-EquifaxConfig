@@ -166,7 +166,7 @@ class Action
      * @param string $actionVolume Объём выполняемой операции, производимой с записью кредитной истории
      * @return void
      */
-    private function setActionVolume(string $actionVolume = null): void
+    private function setActionVolume(?string $actionVolume = null): void
     {
         $this->action_volume = (new TheVolumeOfTheOperationPerformedWithTheRecordOfTheCreditHistory($actionVolume))->code;
     }
@@ -176,7 +176,7 @@ class Action
      * @param string $actionReason Причина предоставления операции, производимой с записью кредитной истории
      * @return void
      */
-    private function setActionReason(string $actionReason = null): void
+    private function setActionReason(?string $actionReason = null): void
     {
         $this->action_reason = (new ReasonForGrantingOperationDProducedWithCreditHistoryRecord($actionReason))->code;
     }

@@ -168,7 +168,7 @@ class Action
      */
     private function setActionVolume(?string $actionVolume = null): void
     {
-        $this->action_volume = (new TheVolumeOfTheOperationPerformedWithTheRecordOfTheCreditHistory($actionVolume))->code;
+        $this->action_volume = (int)(new TheVolumeOfTheOperationPerformedWithTheRecordOfTheCreditHistory($actionVolume))->code;
     }
 
     /**

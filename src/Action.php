@@ -79,7 +79,7 @@ class Action
         foreach ($data as $key => $value) {
             $method = $this->getMethod($key);
             if (method_exists($this, $method)) {
-                $this->$method($value);
+                $this->$method((string)$value);
             }
         }
         Config::instance()->setAction($this);

@@ -18,7 +18,7 @@ use CloudCastle\EquifaxLibrary\ListOfEventsForTheTransferOfCreditHistory;
  * @author Зорин Алексей <zorinalexey59292@gmail.com>
  * @copyright 2022 разработчик Зорин Алексей Евгеньевич.
  */
-class Action
+class Info
 {
 
     /**
